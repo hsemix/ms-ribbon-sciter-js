@@ -1,0 +1,209 @@
+<html>
+    <head>
+        <title>Ribbon Menu Project</title>
+        <link rel="stylesheet" href="ribbon.css">        
+    </head>
+
+    <toolbar role="ribbonmenu">
+        <ul class="tabs-holder">
+            <li class="static"><a href="#">File</a></li>
+            <li><a href="#section-one">Home</a></li>
+            <li><a href="#section-two">Share</a></li>
+            <li><a href="#section-three">View</a></li>
+            <li><a href="#section-four">Application Tools</a></li>
+        </ul>
+        <section class="content-holder">
+            <section class="section" id="section-one" caption="Home"> 
+                <div class="group">
+                    <button class="ribbon-button">
+                        <span class="icon">
+                            <img src="user-login-48.png">
+                        </span>
+                        <span class="caption">Share</span>
+                    </button>
+
+                    <div class="ribbon-split-button">
+                        <button class="ribbon-main">
+                            <span class="icon">
+                                <!--span class="mif-cogs"></span -->
+                                <img src="user-login-48.png">
+                            </span>
+                        </button>
+                        <span class="ribbon-split dropdown-toggle" id="blur-me">Options</span>
+                        <ul class="ribbon-dropdown" data-role="dropdown" data-duration="100">
+                            <li class="checked"><a href="#">Modification</a></li>
+                            <li class="checked"><a href="#">Type</a></li>
+                            <li class="checked"><a href="#">Size</a></li>
+                            <li><a href="#">Creating</a></li>
+                            <li><a href="#">Authors</a></li>
+                            <li class="checked-one"><a href="#">Tags</a></li>
+                            <li><a href="#">Names</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Columns...</a></li>
+                        </ul>
+                    </div>
+                    <button class="ribbon-button">
+                        <span class="icon">
+                            <img src="user-login-48.png">
+                        </span>
+                        <span class="caption">Share</span>
+                    </button>
+
+                    <span class="title">Clipboard</span>
+                </div>
+                <div class="group hide-ribbon-section">
+                    <button class="ribbon-button">
+                        <span class="icon">
+                            <img src="user-login-48.png">
+                        </span>
+                        <span class="caption">Share</span>
+                    </button>
+
+                    <span class="title">Organize</span>
+                </div>
+
+                <div class="group">
+
+                    <div data-role="buttonsGroup" data-cls-active="active">
+                        <button class="ribbon-button">
+                            <span class="icon">
+                                <span class="mif-vertical-align-top"></span>
+                            </span>
+                            <span class="caption">Top</span>
+                        </button>
+                        <button class="ribbon-button">
+                            <span class="icon">
+                                <span class="mif-vertical-align-center"></span>
+                            </span>
+                            <span class="caption">Center</span>
+                        </button>
+                        <button class="ribbon-button">
+                            <span class="icon">
+                                <span class="mif-vertical-align-bottom"></span>
+                            </span>
+                            <span class="caption">Bottom</span>
+                        </button>
+                    </div>
+
+                    <span class="title">Role group</span>
+                </div>
+
+
+                <div class="group">
+                    <div class="ribbon-horizontal-toggle">
+                        <button class="ribbon-icon-button">
+                            <span class="icon">
+                                <img src="user-login-48.png">
+                            </span>
+                            <span class="caption">Apple</span>
+                        </button>
+
+                        <div class="">
+                            <button class="ribbon-icon-button dropdown-toggle">
+                                <span class="icon">
+                                    <img src="user-login-48.png">
+                                </span>
+                                <span class="caption">Apps</span>
+                            </button>
+                            <ul class="ribbon-dropdown" data-role="dropdown" data-duration="100">
+                                <li class="checked"><a href="#">Modification</a></li>
+                                <li class="checked"><a href="#">Type</a></li>
+                                <li class="checked"><a href="#">Size</a></li>
+                                <li><a href="#">Creating</a></li>
+                                <li><a href="#">Authors</a></li>
+                                <li class="checked-one"><a href="#">Tags</a></li>
+                                <li><a href="#">Names</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Columns...</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="ribbon-toggle-group">
+                        <button class="ribbon-icon-button">
+                            <span class="icon">
+                                <img src="user-login-48.png">
+                            </span>
+                            <span class="caption">List</span>
+                        </button>
+
+                        <button class="ribbon-icon-button">
+                                <span class="icon">
+                                    <span class="mif-apps"></span>
+                                </span>
+                            <span class="caption">Content</span>
+                        </button>
+
+                        <button class="ribbon-icon-button">
+                                <span class="icon">
+                                    <span class="mif-table"></span>
+                                </span>
+                            <span class="caption">Icons</span>
+                        </button>
+
+                        <button class="ribbon-icon-button">
+                                <span class="icon">
+                                    <span class="mif-image"></span>
+                                </span>
+                            <span class="caption">Small icons</span>
+                        </button>
+
+                        <button class="ribbon-icon-button">
+                                <span class="icon">
+                                    <span class="mif-images"></span>
+                                </span>
+                            <span class="caption">Large icons</span>
+                        </button>
+
+                        <button class="ribbon-icon-button">
+                                <span class="icon">
+                                    <span class="mif-windows"></span>
+                                </span>
+                            <span class="caption">Tiles</span>
+                        </button>
+                    </div>
+
+                    <span class="title">Group class</span>
+                </div>
+            </section>
+
+            <section class="section" id="section-two" caption="Image"> 
+                <div class="group">
+                    <div class="">
+                        <button class="ribbon-button dropdown-toggle">
+                            <span class="icon">
+                                <img src="user-login-48.png">
+                            </span>
+                            <span class="caption">Compress</span>
+                        </button>
+                        <ul class="ribbon-dropdown" data-role="dropdown" data-duration="100">
+                            <li class="checked"><a href="#">Modification</a></li>
+                            <li class="checked"><a href="#">Type</a></li>
+                            <li class="checked"><a href="#">Size</a></li>
+                            <li><a href="#">Creating</a></li>
+                            <li><a href="#">Authors</a></li>
+                            <li class="checked-one"><a href="#">Tags</a></li>
+                            <li><a href="#">Names</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Columns...</a></li>
+                        </ul>
+                    </div>
+                    <span class="title">Button</span>
+                </div>
+            </section>
+            <section class="section" id="section-three" caption="Tools"> 
+                <p class="p-4">Section three</p>
+            </section>
+            <section class="section" id="section-four" caption="Shapes"> 
+                <p class="p-4">Section four</p>
+            </section>
+        </section>
+    </toolbar>
+    <body>
+        
+    </body>
+    <statusbar>
+        <span>left</span>
+        <span>right</span>
+    </statusbar>
+
+</html>
