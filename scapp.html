@@ -1,0 +1,112 @@
+<html>
+    <head>
+        <title>Ribbon Menu Projects</title>
+        <link rel="stylesheet" href="src/fontawesome.css">
+        <link rel="stylesheet" href="src/ribbon-control.css">
+    </head>
+    <body>
+        <ribbon-control>
+            <tab class="static" title="File">
+                
+            </tab>
+            <tab title="Home">
+                <p> Home </p>
+                <button> Home </button>
+            </tab>
+            <tab title="Share">
+                <div class="group">
+                    <button class="ribbon-button">
+                            <span class="icon">
+                                <img src="images/share.svg">
+                            </span>
+                        <span class="caption">Share</span>
+                    </button>
+    
+                    <span class="title">Share</span>
+                </div>
+    
+                <div class="group">
+                    <button class="ribbon-button">
+                            <span class="icon">
+                                <img src="images/share.svg">
+                            </span>
+                        <span class="caption">Share</span>
+                    </button>
+    
+                    <span class="title">Group title</span>
+                </div>
+            </tab>
+            <tab title="View" selected>
+                <div class="group">
+                    <button class="ribbon-button">
+                        <span class="icon">
+                            <i class="fas fa-cart-arrow-down fg-darkAmber"></i>
+                        </span>
+                        <span class="caption">Add<br />Sale</span>
+                    </button>
+                    <span class="title">Sales</span>
+                </div>
+                <div class="group">
+                    <div class="ribbon-horizontal-toggle">
+                        <button class="ribbon-icon-button">
+                            <span class="icon">
+                                <i class="fas fa-cloud-upload fg-black"></i>
+                            </span>
+                            <span class="caption fg-green">Suspended Receipts</span>
+                        </button>
+    
+                        <div class="">
+                            <button class="ribbon-icon-button dropdown-toggle">
+                                <span class="icon">
+                                    <i class="fas fa-info-circle fg-black"></i>
+                                </span>
+                                <span class="caption">Get Suspended Receipts <span class="fg-green">(0)</span></span>
+                            </button>
+                            <ul class="ribbon-dropdown" data-role="dropdown" data-duration="100">
+                                <li class="checked"><a href="#">Modification</a></li>
+                                <li class="checked"><a href="#">Type</a></li>
+                                <li class="checked"><a href="#">Size</a></li>
+                                <li><a href="#">Creating</a></li>
+                                <li><a href="#">Authors</a></li>
+                                <li class="checked-one"><a href="#">Tags</a></li>
+                                <li><a href="#">Names</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Columns...</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <span class="title">Manager</span>
+                </div>
+                <div class="group">
+                    <div class="ribbon-horizontal-toggle">
+                        <div>
+                            <button class="ribbon-tool-button dropdown-toggle">
+                                <span class="icon">
+                                    <span class="mif-file-zip fg-cyan"></span>
+                                </span>
+                            </button>
+                            <ul class="ribbon-dropdown" data-role="dropdown" data-duration="100">
+                                <li class="checked"><a href="#">Modification</a></li>
+                                <li class="checked"><a href="#">Type</a></li>
+                                <li class="checked"><a href="#">Size</a></li>
+                                <li><a href="#">Creating</a></li>
+                                <li><a href="#">Authors</a></li>
+                                <li class="checked-one"><a href="#">Tags</a></li>
+                                <li><a href="#">Names</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Columns...</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <span class="title">Test</span>
+                </div>
+            </tab>
+            <tab title="Application Tools">
+                
+                <button>Application Tools </button>
+                
+            </tab>
+            <tab title="Source Control" src="src.html" />
+        </ribbon-control>
+    </body>
+</html>
