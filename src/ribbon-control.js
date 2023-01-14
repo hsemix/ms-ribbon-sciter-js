@@ -133,6 +133,9 @@ export class RibbonControl extends Element
         let allTabs = this.$$(">tab");
         var selected = this.$(">tab[selected]") || this.$(">tab:first-child");
 
+        // if (selected.classList.contains("static"))
+        //     selected = 
+
         var title = selected.attributes["title"];
 
         // find section we need to show by default 
@@ -140,11 +143,11 @@ export class RibbonControl extends Element
 
         var minimizeRibbon = `
             <li class="minimize-ribbon">
-                <span tooltip="<b>Minimize the Ribbon (Ctrl+F1)</b>
+                <span id="minimize-ribbon-menu" tooltip="<b>Minimize the Ribbon (Ctrl+F1)</b>
                     <br />Show only the tab names on the Ribbon.">
                     <i class="fg-gray fas fa-angle-up"></i>
                 </span>
-                <span tooltip="<b>Help</b>
+                <span id="ribbon-menu-help" tooltip="<b>Help</b>
                     <br />Get Help&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;">
                     <i class="fg-darkBlue fas fa-question-circle"></i>
                 </span>
@@ -236,5 +239,63 @@ export class RibbonControl extends Element
             activeTabContainer.attributes["style"] = undefined;
             activeTabContainer.classList.add("active");
         }
+    }
+
+    ["on click at .ribbon-split.dropdown-toggle, .ribbon-icon-button.dropdown-toggle, .ribbon-button.dropdown-toggle, .ribbon-tool-button.dropdown-toggle"](event, button) {
+        
+        var dropdownParent = button.$p("div");
+
+        var dropdown = dropdownParent.$(".ribbon-dropdown");
+        
+        if (button.classList.contains("active")) {
+            button.classList.remove("active");
+            dropdown.attributes["style"] = "display: none;";
+        } else {
+            button.classList.add("active");
+            dropdown.attributes["style"] = "display: block;";
+        }
+    }
+
+    ["on blur at .ribbon-split.dropdown-toggle, .ribbon-icon-button.dropdown-toggle, .ribbon-button.dropdown-toggle, .ribbon-tool-button.dropdown-toggle"](event, button) {
+        var dropdownParent = button.$p("div");
+
+        var dropdown = dropdownParent.$(".ribbon-dropdown");
+        
+        if (button.classList.contains("active")) {
+            button.classList.remove("active");
+            dropdown.attributes["style"] = "display: none;";
+        }
+    }
+
+    ["on click at body"](event, button) {
+        view.modal(<info>Testing </info>)
+    }
+
+    ["on click at #minimize-ribbon-menu"](event, button) {
+        let allTabs = button.$p("ul");
+        let tabContainer = this.$$(".content-holder > .section");
+        if (!button.$p("li").classList.contains("static")) {
+            let tabs = allTabs.querySelectorAll("li");
+            for (let i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove("active");
+            }
+
+            for (let j = 0; j < tabContainer.length; j++) {
+                tabContainer[j].classList.remove("active");
+                tabContainer[j].attributes["style"] = "display: none;";
+            }
+        }
+    }
+
+    ["on click at #ribbon-menu-help"](event, button) {
+        view.modal(<info>Ribbon Menu Help.</info>);
+    }
+
+    ["on keydown"](event) { 
+        if(!this.state.focus)
+            return false;
+
+        var currentLabel = this.$(">strip>label:current");
+        view.modal(<info>keydown {event.code}</info>);
     }
 }

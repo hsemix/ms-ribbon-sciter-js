@@ -1,3 +1,5 @@
+@import url("colors.css");
+
 tab {
     prototype: Tab url('ribbon-control.js');
 
@@ -58,6 +60,7 @@ ribbon-control {
 
 ribbon-control .tabs-holder {
     flow: horizontal;
+    background: #ffffff;
     list-style: none inside;
     margin: 0;
     padding: 0;
@@ -107,7 +110,7 @@ ribbon-control .tabs-holder li.minimize-ribbon {
     padding: 0;
     /* border: 1dip solid red; */
     flow: horizontal;
-    background: #f5f6f7;
+    /* background: #f5f6f7; */
 
     /* display: auto; */
 }
@@ -141,7 +144,8 @@ ribbon-control .tabs-holder li.minimize-ribbon span:hover {
 }
 
 ribbon-control .tabs-holder li.minimize-ribbon span > i {
-    font-size: 14dip;
+    font-size: 16dip;
+    padding: 2dip;
     /* margin: 2dip; */
 }
 
@@ -590,15 +594,15 @@ ribbon-control .content-holder .group + .group {
     display: none;
 }
 
-statusbar { 
+status-bar { 
     display:block;
     flow:horizontal;
     background:#f4f4f4; 
 }
 
-statusbar > span { 
+status-bar > span { 
     padding: 4dip; 
 }
-statusbar > span:last-child { 
+status-bar > span:last-child { 
     margin-left:*; 
 }
